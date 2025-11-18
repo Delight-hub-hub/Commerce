@@ -1,12 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Forms
-import AddressForm from "./AddressForm";
-import AddCardForm from "./addCardForm";
-import SelectCard from "./selectCard";
-
 // Components
+import AddressForm from "./components/AddressForm";
+import AddCardForm from "./components/addCardForm";
+import SelectCard from "./components/selectCard";
 import CartSummary from "./components/CartSummary";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
