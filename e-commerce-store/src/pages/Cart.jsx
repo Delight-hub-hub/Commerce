@@ -47,7 +47,7 @@ export default function Cart() {
                                 className="bg-white rounded-2xl shadow-sm p-8 flex items-start gap-8"
                             >
                                 {/* Product Image */}
-                                <div className="w-36 h-36 shrink-0 bg-gray-50 rounded-xl p-4">
+                                <div className="w-36 h-36 flex-shrink-0 bg-gray-50 rounded-xl p-4">
                                     <img
                                         src={item.image}
                                         alt={item.title}
@@ -111,11 +111,13 @@ export default function Cart() {
                         ))
                     )}
                 </div>
+
+                {/* Removed inline subtotal/checkout CTA — summary lives in the sidebar */}
             </div>
 
             {/* Right Sidebar - Bag Summary */}
-            <div className="border-l-4 top-border-l-2 border-gray-300 gap-4 p-4 top-[51px] sm:hidden md:block lg:block">
-                <div className="w-[250px] h-10">
+            <div className="border-l-2 border-gray-300 gap-4 p-4 top-[51px] sm:hidden md:block lg:block">
+                <div className="w-[250px]">
                     <CartSummary />
                 </div>
             </div>

@@ -1,7 +1,7 @@
 // src/pages/Checkout.jsx
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { selectCartItems, selectCartTotalPrice } from "../store/cartSlice";
 import { FaStar, FaCreditCard, FaGift } from "react-icons/fa";
 
@@ -40,6 +40,9 @@ export default function Checkout() {
     return (
         <div className="min-h-screen bg-gray-50 py-4 sm:py-6 lg:py-8 px-3 sm:px-4 lg:px-6">
             <div className="max-w-7xl mx-auto">
+                <div className="mb-4">
+                    <Link to="/cart" className="text-sm text-gray-600 hover:underline">&larr; Back to Bag</Link>
+                </div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
                     {/* Left Column - Shipping & Payment */}
                     <div className="lg:col-span-2 space-y-4 sm:space-y-6">
@@ -69,19 +72,19 @@ export default function Checkout() {
                             </div>
                             <div className="space-y-3 text-sm sm:text-base">
                                 <div className="flex items-center gap-2 sm:gap-3">
-                                    <FaCreditCard className="text-gray-600 shrink-0" size={20} />
+                                    <FaCreditCard className="text-gray-600 flex-shrink-0" size={20} />
                                     <span className="text-gray-700">
                                         {paymentMethod.type} ending in {paymentMethod.lastFour}
                                     </span>
                                 </div>
                                 <div className="flex items-center gap-2 sm:gap-3">
-                                    <FaGift className="text-gray-600 shrink-0" size={20} />
+                                    <FaGift className="text-gray-600 flex-shrink-0" size={20} />
                                     <span className="text-gray-700">
                                         $ {paymentMethod.giftCardBalance.toFixed(2)} gift card balance
                                     </span>
                                 </div>
                                 <div className="flex items-start sm:items-center gap-2 sm:gap-3">
-                                    <div className="w-5 h-5 bg-green-500 rounded flex items-center justify-center shrink-0 mt-0.5 sm:mt-0">
+                                    <div className="w-5 h-5 bg-green-500 rounded flex items-center justify-center flex-shrink-0 mt-0.5 sm:mt-0">
                                         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
                                             <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                                         </svg>
@@ -98,7 +101,7 @@ export default function Checkout() {
                                 {cartItems.map((item) => (
                                     <div key={item.id} className="flex flex-col sm:flex-row gap-4 sm:gap-6 pb-4 sm:pb-6 border-b border-gray-200 last:border-b-0">
                                         {/* Product Image */}
-                                        <div className="w-full sm:w-32 h-40 sm:h-32 shrink-0 bg-gray-50 rounded-lg p-2">
+                                        <div className="w-full sm:w-32 h-40 sm:h-32 flex-shrink-0 bg-gray-50 rounded-lg p-2">
                                             <img
                                                 src={item.image}
                                                 alt={item.title}
