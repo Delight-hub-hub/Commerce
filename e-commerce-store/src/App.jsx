@@ -1,4 +1,4 @@
-import Recat from 'react'
+import React from 'react'
 import AddressForm from './AddressForm'
 import AddCardForm from './addCardForm'
 import SelectCard from './selectCard'
