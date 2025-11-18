@@ -8,9 +8,13 @@ import AddCardForm from "./addCardForm";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
+  <React.StrictMode>
+    <Provider store={store}>
+      <App/>
     <AddressForm />
     <AddCardForm/>
 
   </Provider>
+  </React.StrictMode>
+  
 );

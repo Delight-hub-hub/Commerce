@@ -1,1 +1,98 @@
-@import 'tailwindcss'
+@import "tailwindcss";
+
+:root {
+    --black: rgba(26, 31, 22, 1);
+    --gray: rgba(96, 105, 92, 1);
+}
+
+/* Tailwind utility classes */
+@layer utilities {
+    .text-product {color: var(--black); }
+    .text-description { color: var(--gray); }
+}
+
+.product-name {
+    color: var(--black);
+    font-weight: 500;
+    font-size: 20px;
+    width: 200px;
+    height: 24px;
+}
+
+.form {
+    width: 507px;
+    height: 56px;
+    border-radius: 13px;
+    opacity: 1;
+    gap: 8px;
+    padding-top: 8px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+
+}
+
+.bag-area {
+    width: 345;
+    height: 1024;
+    left: 1095px;
+    gap: 10px;
+    opacity: 1;
+    padding-top: 72px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+
+}
+
+.mini-cart {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    padding: 8px;
+    gap: 16px;
+    opacity: 1;
+
+}
+
+.CTA {
+    width: 159;
+    height: 40;
+    border-radius: 14px;
+    gap: 8px;
+    opacity: 1;
+    padding-top: 8px;
+    padding-right: 24px;
+    padding-bottom: 8px;
+    padding-left: 24px;
+    align-items: center;
+   
+
+}
+
+.border-style {
+    width: 921.5999755859383px;
+    height: 0px;
+    top: 51px;
+    left: 1095px;
+    opacity: 1;
+    border-width: 4px;
+
+}
+
+.border-bottom {
+    width: 858.0000000000032px;
+    height: 0px;
+    opacity: 1;
+    border-width: 3px;
+
+}
+
+.bottom-content {
+    width: 905px;
+    height: 493.00006103515625px;
+    gap: 16px;
+    opacity: 1;
+    padding: 8px;
+
+}
