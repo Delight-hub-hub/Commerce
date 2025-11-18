@@ -11,6 +11,7 @@ function ProductDetail() {
   // Receive product from navigation state
   const { state } = useLocation();
   const product = state?.product;
+  
 
   return (
     <section className="flex flex-col md:flex-row min-h-screen bg-gray-200">
@@ -29,8 +30,22 @@ function ProductDetail() {
         <div className="flex gap-6 flex-col md:flex-row md:gap-8 0 mb-10">
           <div className="flex gap-4 md:gap-6">
 
-            {/* Thumbnails */}
+            {/*Mini images */}
             <div className="flex flex-row md:flex-col gap-2 md:gap-4">
+              <div className="w-[50px] h-[60px] p-2 bg-white rounded-md shadow-sm md:w-[60px] md:h-[70px] flex items-center justify-center shrink-0">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <div className="w-[50px] h-[60px] p-2 bg-white rounded-md shadow-sm md:w-[60px] md:h-[70px] flex items-center justify-center shrink-0">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-contain"
+                />
+              </div>
               <div className="w-[50px] h-[60px] p-2 bg-white rounded-md shadow-sm md:w-[60px] md:h-[70px] flex items-center justify-center shrink-0">
                 <img
                   src={product.image}
@@ -64,8 +79,9 @@ function ProductDetail() {
               </p>
 
               <p className="text-sm text-gray-500 mt-4 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+                {product.shortDescription}
               </p>
+
             </div>
 
             <div className="w-full max-w-[258px] mt-6">
@@ -76,14 +92,13 @@ function ProductDetail() {
 
         <div className="border-t border-gray-300 pt-6">
           <h1 className="text-lg font-semibold mb-4">Description</h1>
+          
           <p className="text-sm text-gray-600 leading-relaxed max-h-[300px] overflow-y-auto pr-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            {product.longDescription}
           </p>
+          </div>
         </div>
-
-      </div>
-
-      <aside className="hidden md:block ml-20 w-[300px] border-l p-6">
+        <aside className="hidden md:block ml-20 w-[300px] border-l p-6">
         <CartSummary />
       </aside>
     </section>

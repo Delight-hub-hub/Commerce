@@ -20,6 +20,9 @@ export default function Products() {
       modal: "Series 5 SE",
       price: "$ 529,99",
       Bag: Button,
+      shortDescription: "Lightweight apple watch, sleek, and built for everyday fitness and notifications.",
+      longDescription:
+    "The Apple Watch Series 5 SE delivers seamless performance with its always-on Retina display, advanced fitness tracking, heart rate monitoring, and customizable bands. Designed for comfort and productivity, it supports GPS, emergency SOS, and integrates perfectly with your Apple ecosystem. Whether you're running, training, or staying connected on the go, it offers reliable battery life and a premium feel."
     },
     {
       image: Headphones,
@@ -27,13 +30,19 @@ export default function Products() {
       modal: "Light Grey",
       price: "$ 39,99",
       Bag: Button,
+      shortDescription: "Wireless, lightweight, and built for crisp everyday listening with long-lasting battery life.",
+      longDescription: 
+      "The Sony ZX330BT delivers smooth wireless audio with a comfortable on-ear design perfect for daily use. Its Bluetooth connectivity keeps you free from cables, while the extended battery life ensures hours of uninterrupted playback. Soft ear cushions, balanced sound tuning, and a foldable design make it an easy go-to for commuting, studying, gym sessions, or casual chilling. Reliable, durable, and effortlessly portable,your steady audio partner."
     },
     {
       image: Blackiphone11,
       name: "Iphone 11",
-      modal: "Serious Black",
+      modal: "Series Black",
       price: "$ 619,99",
       Bag: Button,
+      shortDescription: "A bold, clean finish paired with fast performance and a sharp dual-camera system.",
+      longDescription: 
+      "The iPhone 11 in Serious Black showcases Apple’s signature blend of power and elegance. Equipped with the A13 Bionic chip, a 6.1-inch Liquid Retina display, and a dual 12MP camera system, it delivers smooth performance and stunning photos in every lighting condition. Its tough glass, long battery life, and water-resistant design make it a practical daily driver wrapped in a premium matte look. Reliable. Sleek. Distinctly timeless.",
     },
     {
       image: Blueiphone11,
@@ -41,6 +50,8 @@ export default function Products() {
       modal: "Subway Blue",
       price: "$ 619,99",
       Bag: Button,
+      shortDescription: "Vibrant and stylish with powerful performance and a smooth, immersive display.",
+      longDescription: "The iPhone 11 Subway Blue edition combines standout color with high-grade capability. Powered by the A13 Bionic chip, it handles apps, multitasking, and gaming with ease. Its dual 12MP cameras capture detailed photos and stable videos, while Night Mode brings clarity to low-light shots. The 6.1-inch Liquid Retina display offers accurate color reproduction and a comfortable viewing experience. A bold choice for users who like their tech both striking and dependable.",
     },
     {
       image: Rediphone11,
