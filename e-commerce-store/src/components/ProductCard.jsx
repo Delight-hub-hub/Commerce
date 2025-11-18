@@ -42,7 +42,7 @@ export default function Products() {
             </div>
           </Link>
 
-          {/* PRICE + BAG */}
+          {/* Price + Bag*/}
           <div className="flex items-center justify-between w-full px-2">
             <p className="product-name">{product.price}</p>
 

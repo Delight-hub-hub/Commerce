@@ -8,7 +8,7 @@ export default function Navbar() {
                 Search Item
             </p>
             
-            <input className=' form sm:w-[400px] w-full text-sm md:text-base text-rgba(26, 31, 22, 0.5) bg-white ' 
+            <input className=' form w-full sm:px-4 text-sm md:text-base text-rgba(26, 31, 22, 0.5) bg-white ' 
             type='text' 
             placeholder='Apple Watch, Samsung S21, Macbook Pro, ...' />
         </div>
