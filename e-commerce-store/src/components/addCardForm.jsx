@@ -2,7 +2,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { updateField, saveCard } from "./paymentSlice";
+import { updateField, saveCard } from "../store/paymentSlice";
 
 const AddCardForm = () => {
   const payment = useSelector((state) => state.payment);

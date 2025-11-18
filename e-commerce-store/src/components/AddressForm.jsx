@@ -1,7 +1,7 @@
 //components folder to be created and all pages put on that folder
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateField, saveAddress } from "./addressSlice";
+import { updateField, saveAddress } from "../store/addressSlice";
 
 const AddressForm = () => {
   const address = useSelector((state) => state.address);

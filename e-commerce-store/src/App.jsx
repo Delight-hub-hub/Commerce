@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-import React from 'react'
-import AddressForm from './AddressForm'
-import AddCardForm from './addCardForm'
-import SelectCard from './selectCard'
-=======
 import React from "react";
->>>>>>> 84d89e26d15e8913a10f1aa2118a15153aa4470c
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Components
 import AddressForm from "./components/AddressForm";
 import AddCardForm from "./components/addCardForm";
 import SelectCard from "./components/selectCard";
@@ -81,19 +73,4 @@ const App = () => {
   );
 };
 
-<<<<<<< HEAD
-                {/* Payment / Address Pages */}
-                <Route path="/add-card" element={<AddCardForm />} />
-                <Route path="/address" element={<AddressForm />} />
-
-            </Routes>
-        </Router>
-                {/* SelectCard removed: it caused a persistent 'SELECT A CARD' panel on all pages */}
-
-    </>
-  )
-}
-export default App
-=======
 export default App;
->>>>>>> 84d89e26d15e8913a10f1aa2118a15153aa4470c
