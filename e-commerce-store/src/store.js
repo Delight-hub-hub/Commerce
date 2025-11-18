@@ -7,8 +7,9 @@ import cartReducer from './store/cartSlice'
 export const store = configureStore({
   reducer: {
     address: addressReducer,
-    payment: paymentReducer,
-    cart: cartReducer,
+    payment: paymentReducer
+    ,
+    cart: cartReducer
   },
 
 });

@@ -26,7 +26,7 @@ export default function Cart() {
     };
 
     return (
-        <div className="flex bg-gray-200 min-h-screen">
+        <div className="flex flex-col md:flex-row bg-gray-200 min-h-screen">
             {/* Sidebar */}
             <Sidebar />
 
@@ -47,7 +47,11 @@ export default function Cart() {
                                 className="bg-white rounded-2xl shadow-sm p-8 flex items-start gap-8"
                             >
                                 {/* Product Image */}
+<<<<<<< HEAD
+                                <div className="w-24 h-24 md:w-36 md:h-36 shrink-0 bg-gray-50 rounded-xl p-4">
+=======
                                 <div className="w-36 h-36 flex-shrink-0 bg-gray-50 rounded-xl p-4">
+>>>>>>> 84d89e26d15e8913a10f1aa2118a15153aa4470c
                                     <img
                                         src={item.image}
                                         alt={item.title}
@@ -116,8 +120,13 @@ export default function Cart() {
             </div>
 
             {/* Right Sidebar - Bag Summary */}
+<<<<<<< HEAD
+            <div className="w-full md:w-[250px] p-4 md:border-l-2 border-gray-300">
+                <div className="md:sticky md:top-16">
+=======
             <div className="border-l-2 border-gray-300 gap-4 p-4 top-[51px] sm:hidden md:block lg:block">
                 <div className="w-[250px]">
+>>>>>>> 84d89e26d15e8913a10f1aa2118a15153aa4470c
                     <CartSummary />
                 </div>
             </div>
