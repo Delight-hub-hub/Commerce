@@ -42,7 +42,7 @@ const App = () => {
               </div>
 
               {/* Cart Summary (only md & lg) */}
-              <div className="border-l-2 border-gray-300 gap-4 p-4 top-[51px] sm:hidden md:block lg:block">
+              <div className="border-l-2 border-gray-300  p-4 top-[51px] sm:hidden md:block lg:block">
                 <div className="w-[250px] h-10">
                   <CartSummary />
                 </div>

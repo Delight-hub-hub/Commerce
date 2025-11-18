@@ -49,9 +49,9 @@ export default function Products() {
     </h1>
     
     {/* Grid layout for cart products */}
-    <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:gap-4 gap-4">
+    <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:gap-4 gap-6">
       {product.map((product, index) => (
-        <div key={index} className="w-14 h-14">
+        <div key={index} className="w-14 h-14 ">
           <img src={product.image} alt={product.name} className="bg-white mini-cart object-contain p-1 rounded" />
         </div>
       ))}
