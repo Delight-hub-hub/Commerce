@@ -1,4 +1,4 @@
-// src/components/AddressForm.jsx
+//components folder to be created and all pages put on that folder
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateField, saveAddress } from "./addressSlice";
