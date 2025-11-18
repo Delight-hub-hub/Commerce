@@ -59,16 +59,13 @@ const App = () => {
 
         {/* Checkout */}
         <Route path="/checkout" element={<Checkout />} />
-
+         <Route path="/selectCard" element={<SelectCard/>} />
+         <Route path="/addCardForm" element={<AddCardForm />} />
+         <Route path="/addressForm" element={<AddressForm />} />
       </Routes>
 
       {/* Forms rendered globally */}
-      <div>
-        <SelectCard />
-        <AddCardForm />
-      </div>
-
-      <AddressForm />
+    
     </Router>
   );
 };
