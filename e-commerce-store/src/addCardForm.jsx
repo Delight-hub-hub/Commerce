@@ -1,11 +1,13 @@
 // src/components/AddCardForm.jsx
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { updateField, saveCard } from "./paymentSlice";
 
 const AddCardForm = () => {
   const payment = useSelector((state) => state.payment);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = (field, value) => {
     dispatch(updateField({ field, value }));
@@ -14,6 +16,8 @@ const AddCardForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(saveCard());
+    // after saving card, go to address form
+    navigate('/address');
   };
 
   return (

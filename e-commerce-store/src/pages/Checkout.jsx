@@ -34,7 +34,8 @@ export default function Checkout() {
     };
 
     const handlePlaceOrder = () => {
-        alert("Order placed successfully!");
+        // Navigate to add card form to collect payment details
+        navigate('/add-card');
     };
 
     return (

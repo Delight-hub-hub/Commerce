@@ -1,4 +1,4 @@
-import Recat from 'react'
+import React from 'react'
 import AddressForm from './AddressForm'
 import AddCardForm from './addCardForm'
 import SelectCard from './selectCard'
@@ -65,13 +65,13 @@ const App =()=>{
                 {/* Checkout Page */}
                 <Route path="/checkout" element={<Checkout />} />
 
+                {/* Payment / Address Pages */}
+                <Route path="/add-card" element={<AddCardForm />} />
+                <Route path="/address" element={<AddressForm />} />
+
             </Routes>
         </Router>
-        <div>
-          <SelectCard/>
-          <AddCardForm/>
-        </div>
-        <AddressForm/>
+                {/* SelectCard removed: it caused a persistent 'SELECT A CARD' panel on all pages */}
 
     </>
   )

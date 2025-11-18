@@ -20,30 +20,32 @@ export default function Home() {
 
   return (
     <div className="flex-1 p-4">
-      {/* Keep Navbar usage outside or inside App */}
-      <div className="mb-6">
-        {/* Search input local to Home */}
-        <div className="w-full max-w-lg">
-          <input
-            className="form bg-white"
-            placeholder="Search products..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
+      <div className="container mx-auto px-4">
+        {/* Keep Navbar usage outside or inside App */}
+        <div className="mb-6">
+          {/* Search input local to Home */}
+          <div className="w-full max-w-lg">
+            <input
+              className="form bg-white w-full"
+              placeholder="Search products..."
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          </div>
         </div>
-      </div>
 
-      <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center">
-        {filtered.map((p) => (
-          <Link
-            to={`/product/${p.id}`}
-            key={p.id}
-            state={{ product: p }}
-            className="w-full"
-          >
-            <ProductCard product={p} />
-          </Link>
-        ))}
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 place-items-center">
+          {filtered.map((p) => (
+            <Link
+              to={`/product/${p.id}`}
+              key={p.id}
+              state={{ product: p }}
+              className="w-full"
+            >
+              <ProductCard product={p} />
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

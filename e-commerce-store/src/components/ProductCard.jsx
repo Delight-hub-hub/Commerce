@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 // Import product images
 import watch from "../assets/Apple-watch.png";
@@ -13,6 +13,7 @@ import Iphone14 from "../assets/iPhone14.png";
 import Button from "../assets/Button.png";
 
 export default function Products() {
+  const navigate = useNavigate();
   const product = [
     {
       image: watch,
@@ -91,7 +92,7 @@ export default function Products() {
             <img
               src={product.image}
               alt={product.name}
-              className="bg-white rounded-[22px] p-4 w-full h-[200px] object-contain"
+              className="bg-white rounded-[22px] p-4 w-full h-48 md:h-[200px] object-contain"
             />
 
             {/* Product details */}
@@ -105,14 +106,19 @@ export default function Products() {
           <div className="flex items-center justify-between w-full px-2">
             <p className="product-name">{product.price}</p>
 
-            {/* Bag links to cart */}
-            <Link to="/Home">
-              <img 
-                src={product.Bag} 
-                alt="checkout-bag" 
+            {/* Bag links to cart - use a button to stop parent Link navigation */}
+            <button
+              type="button"
+              onClick={(e) => { e.stopPropagation(); e.preventDefault(); navigate('/cart'); }}
+              className="inline-flex items-center"
+              aria-label="View Bag"
+            >
+              <img
+                src={product.Bag}
+                alt="checkout-bag"
                 className="w-6 h-6 ml-cursor-pointer"
               />
-            </Link>
+            </button>
           </div>
 
         </div>

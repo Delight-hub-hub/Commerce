@@ -4,13 +4,14 @@ import Bag from '../assets/BagCTA.svg';
 import { ChevronLeft } from 'lucide-react';
 import Sidebar from './Sidebar';
 import CartSummary from './CartSummary';
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function ProductDetail() {
 
   // Receive product from navigation state
   const { state } = useLocation();
   const product = state?.product;
+  const navigate = useNavigate();
 
   return (
     <section className="flex flex-col md:flex-row min-h-screen bg-gray-200">
@@ -69,7 +70,13 @@ function ProductDetail() {
             </div>
 
             <div className="w-full max-w-[258px] mt-6">
-              <img src={Bag} alt="Add to Bag" className="object-contain" />
+              <button
+                onClick={() => navigate('/cart')}
+                className="w-full text-left"
+                aria-label="View Bag"
+              >
+                <img src={Bag} alt="Add to Bag" className="object-contain" />
+              </button>
             </div>
           </div>
         </div>
@@ -77,7 +84,11 @@ function ProductDetail() {
         <div className="border-t border-gray-300 pt-6">
           <h1 className="text-lg font-semibold mb-4">Description</h1>
           <p className="text-sm text-gray-600 leading-relaxed max-h-[300px] overflow-y-auto pr-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Dignissim odio faucibus nec malesuada purus volutpat vel sed viverra. Id sagittis, phasellus dui in arcu. Nec arcu, sit nunc, nibh purus pellentesque sagittis. Felis rhoncus facilisis massa eget purus in purus. Etiam at cras nulla nunc. Malesuada in pretium diam scelerisque sit mattis in egestas neque. Eu porta tempor sodales nisl integer turpis porttitor sed sed. Ut senectus odio dictum enim velit tempor diam quisque suspendisse.
+Orci vel ridiculus diam viverra. Libero malesuada orci, quis placerat suscipit augue imperdiet. Et praesent augue dictum mauris eget lacus malesuada. Aenean nisi, sodales natoque massa magna dignissim mi. Mattis tellus, justo, lorem sed tempor diam sit viverra enim. Id id placerat eu etiam nulla laoreet.
+Dignissim leo fames turpis quis suspendisse vulputate laoreet vulputate ac. Aliquam justo lectus eu dui porttitor. Cras a aliquam phasellus sollicitudin ornare. Tristique volutpat facilisis in ut proin. Est vitae facilisi sollicitudin id lorem mattis nibh ipsum, nec. Consectetur consectetur morbi morbi aliquet mi risus, velit, sit at. Integer morbi viverra hendrerit risus.
+Odio phasellus nibh senectus nec id enim quam sed. At potenti sollicitudin sollicitudin lobortis morbi. Nunc molestie et adipiscing aliquam. Sit vel mi dolor suscipit. In eget ut ac at facilisi leo viverra. Arcu ac ut fermentum, viverra et, vitae etiam cras. Eu purus non ut turpis fusce. Mi vitae nibh mi ut feugiat varius risus eros.
+
           </p>
         </div>
 
