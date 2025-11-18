@@ -1,14 +1,14 @@
-import Recat from 'react'
+import React from 'react'
 import AddressForm from './AddressForm'
-{/*import AddCardForm from './addCardForm'*/}
-{/*import SelectCard from './selectCard'*/}
+import AddCardForm from './addCardForm'
+import SelectCard from './selectCard'
 
 const App =()=>{
   return(
     <>
 <div>
-      {/*<SelectCard/>*/}
-     { /*<AddCardForm/>*/}
+      <SelectCard/>
+      <AddCardForm/>
 </div>
       <AddressForm/>
 
