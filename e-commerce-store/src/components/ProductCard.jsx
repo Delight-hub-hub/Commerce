@@ -59,6 +59,8 @@ export default function Products() {
       modal: "Product Red",
       price: "$ 619,99",
       Bag: Button,
+      shortDescription: "A striking design paired with fast performance and impressive all-day battery life.",
+      longDescription: "The iPhone 11 Product Red edition stands out with its vivid finish and Apple’s trusted engineering. The A13 Bionic chip ensures fast responsiveness, while the dual-camera system captures crisp wide and ultra-wide photos with smooth 4K video. It’s durable, water-resistant, and optimized for long battery endurance throughout the day. More than a phone — it’s a statement piece that blends style and performance effortlessly."
     },
     {
       image: Whiteiphone11,
@@ -66,6 +68,8 @@ export default function Products() {
       modal: "Milky White",
       price: "$ 619,99",
       Bag: Button,
+      shortDescription: "Clean, minimalist, and powerful — the perfect balance of performance and style.",
+      longDescription: "The iPhone 11 Milky White offers a refined, neutral finish wrapped around Apple’s advanced A13 Bionic processor. Its dual-camera setup delivers sharp photos and stable video even in challenging lighting. The Liquid Retina display brings vibrant visuals, while the durable build resists wear, splashes, and daily use. It's a simple yet elegant choice for anyone who values aesthetic clarity and reliable everyday performance.",
     },
     {
       image: Iphone13,
@@ -112,7 +116,7 @@ export default function Products() {
             </div>
           </Link>
 
-          {/* PRICE + BAG */}
+          {/* Price + Bag*/}
           <div className="flex items-center justify-between w-full px-2">
             <p className="product-name">{product.price}</p>
 

@@ -78,7 +78,7 @@ export function SidebarItem({ src, icon, text, active, alert }) {
         />
       )}
 
-      {/* Render icon if provided */}
+      {/* Render icon*/}
       {icon && <span className="text-xl">{icon}</span>}
 
       <span

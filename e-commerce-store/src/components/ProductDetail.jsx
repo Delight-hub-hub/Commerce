@@ -30,7 +30,7 @@ function ProductDetail() {
         <div className="flex gap-6 flex-col md:flex-row md:gap-8 0 mb-10">
           <div className="flex gap-4 md:gap-6">
 
-            {/*Mini images */}
+            {/*Mini images stacked in a row */}
             <div className="flex flex-row md:flex-col gap-2 md:gap-4">
               <div className="w-[50px] h-[60px] p-2 bg-white rounded-md shadow-sm md:w-[60px] md:h-[70px] flex items-center justify-center shrink-0">
                 <img
@@ -55,7 +55,7 @@ function ProductDetail() {
               </div>
             </div>
 
-            {/* Main Image */}
+            {/* Main Image centered */}
             <div className="flex items-center justify-center rounded-lg p-4">
               <img
                 src={product.image}
@@ -66,25 +66,28 @@ function ProductDetail() {
 
           </div>
 
-          {/* Product Info */}
+          {/* Product Info next to the image*/}
           <div className="flex flex-col justify-between flex-1">
             <div>
               <h2 className="text-xl md:text-2xl font-semibold">{product.name}</h2>
               <p className="text-base md:text-lg text-gray-600 mt-1">{product.modal}</p>
               <p className="text-lg md:text-xl font-bold text-black mt-4">{product.price}</p>
-
+            
+            {/*Image for the rating */}
               <p className="text-green-900 font-medium flex items-center">
                 <img src={Rating} alt="Rating" className="mt-2" />
                 4.5/5
               </p>
 
+              {/*Short Description*/}
               <p className="text-sm text-gray-500 mt-4 leading-relaxed">
                 {product.shortDescription}
               </p>
 
             </div>
 
-            <div className="w-full max-w-[258px] mt-6">
+            {/*Add item Button*/}
+            <div className="w-full max-w-[258px] ml-90  mt-6">
               <img src={Bag} alt="Add to Bag" className="object-contain" />
             </div>
           </div>
@@ -93,6 +96,7 @@ function ProductDetail() {
         <div className="border-t border-gray-300 pt-6">
           <h1 className="text-lg font-semibold mb-4">Description</h1>
           
+          {/*Longer Description */}
           <p className="text-sm text-gray-600 leading-relaxed max-h-[300px] overflow-y-auto pr-2">
             {product.longDescription}
           </p>
