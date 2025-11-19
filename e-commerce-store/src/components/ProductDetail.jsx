@@ -1,3 +1,4 @@
+ProductDetail.jsx
 import React from 'react';
 import Rating from '../assets/Rating.svg';
 import Bag from '../assets/BagCTA.svg';

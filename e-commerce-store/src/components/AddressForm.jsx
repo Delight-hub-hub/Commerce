@@ -1,7 +1,9 @@
 //components folder to be created and all pages put on that folder
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateField, saveAddress } from "./addressSlice";
+import { updateField, saveAddress } from "../store/addressSlice";
+import {Link} from "react-router-dom";
+
 
 const AddressForm = () => {
   const address = useSelector((state) => state.address);
@@ -90,10 +92,21 @@ const AddressForm = () => {
         >
           Add Address
         </button>
-
-        <p className="text-center text-green-500 text-sm mt-3">
+        <div classsName="flex flex-col ">
+          <div className="flex">
+            <Link to="/checkout">
+            <p className="flex justify-start">Back</p>
+            </Link>
+            
+          </div>
+          <div className="flex justify-end text-green-500 text-sm ml-70">
+             
           🔒 Secure Connection
-        </p>
+      
+          </div>
+       
+        </div>
+       
       </form>
     </div>
   );

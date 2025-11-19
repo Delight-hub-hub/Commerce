@@ -1,11 +1,14 @@
 // src/components/AddCardForm.jsx
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateField, saveCard } from "./paymentSlice";
+import { useNavigate, Link } from "react-router-dom";
+import { updateField, saveCard } from "../store/paymentSlice";
+import SelectCard from "./selectCard";
 
 const AddCardForm = () => {
   const payment = useSelector((state) => state.payment);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = (field, value) => {
     dispatch(updateField({ field, value }));
@@ -14,9 +17,13 @@ const AddCardForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(saveCard());
+    // after saving card, go to address form
+    navigate('/address');
   };
 
   return (
+    <div> 
+      <SelectCard />
     <div className="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg">
       <h2 className="text-xl font-semibold tracking-wide mb-6">
         ADD A NEW CARD
@@ -101,11 +108,13 @@ const AddCardForm = () => {
         <p className="text-center text-green-500 text-sm mt-2">
           🔒 Secure Connection
         </p>
-
+        <Link to="/checkout">
         <button className="text-sm text-gray-600 hover:underline">
           Back
         </button>
+        </Link>
       </form>
+    </div>
     </div>
   );
 };
