@@ -15,14 +15,14 @@ export default function Checkout() {
     const giftCard = 0.00;
     const orderTotal = subtotal + shipping + gst - giftCard;
 
-    const [shippingAddress, setShippingAddress] = useState({
+    const [shippingAddress] = useState({
         name: "John Maker",
         street: "123 Pläe Gïond Stret",
         city: "Vermont, California",
         country: "United States of America"
     });
 
-    const [paymentMethod, setPaymentMethod] = useState({
+    const [paymentMethod] = useState({
         type: "Mastercard",
         lastFour: "1252",
         giftCardBalance: 53.21,
