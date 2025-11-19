@@ -8,8 +8,8 @@ import Blackiphone11 from "../assets/Black-iphone11.png";
 import Blueiphone11 from "../assets/Blue-iphone11.png";
 import Rediphone11 from "../assets/Red-iphone11.png";
 import Whiteiphone11 from "../assets/White-iphone11.png";
-import Iphone13 from "../assets/iPhone13.png";
-import Iphone14 from "../assets/iPhone14.png";
+import Iphone13 from "../assets/iphone13.png";
+import Iphone14 from "../assets/iphone14.png";
 import Button from "../assets/Button.png";
 
 export default function Products() {
